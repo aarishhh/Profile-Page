@@ -20,6 +20,8 @@ import { SocialLink } from '../../interfaces/profile.interface';
           <a href="#about" (click)="scrollTo($event, 'about')">About</a>
           <a href="#skills" (click)="scrollTo($event, 'skills')">Skills</a>
           <a href="#projects" (click)="scrollTo($event, 'projects')">Projects</a>
+          <a href="#certificates" (click)="scrollTo($event, 'certificates')">Education</a>
+          <a href="#certificates" (click)="scrollTo($event, 'certificates')">Certificates</a>
           <a href="#contact" (click)="scrollTo($event, 'contact')">Contact</a>
         </nav>
 
@@ -58,6 +60,8 @@ import { SocialLink } from '../../interfaces/profile.interface';
         <a href="#about" (click)="scrollTo($event, 'about')">About</a>
         <a href="#skills" (click)="scrollTo($event, 'skills')">Skills</a>
         <a href="#projects" (click)="scrollTo($event, 'projects')">Projects</a>
+        <a href="#certificates" (click)="scrollTo($event, 'certificates')">Education</a>
+        <a href="#certificates" (click)="scrollTo($event, 'certificates')">Certificates</a>
         <a href="#contact" (click)="scrollTo($event, 'contact')">Contact</a>
       </div>
     </header>
