@@ -60,24 +60,95 @@ import { Profile } from '../../interfaces/profile.interface';
         </div>
 
         <div class="hero-visual">
-          <div class="avatar-ring">
-            <div class="avatar-ring-inner">
-              <img [src]="profile?.avatar" [alt]="profile?.name" class="avatar-img" />
+
+          <!-- Main profile card -->
+          <div class="pro-card">
+
+            <!-- Top gradient band -->
+            <div class="pro-card-band"></div>
+
+            <!-- Avatar initials -->
+            <div class="pro-avatar-wrap">
+              <div class="pro-avatar">AM</div>
+              <div class="pro-avatar-ring"></div>
             </div>
-            <!-- Orbiting dots -->
-            <div class="orbit orbit-1">
-              <div class="orbit-dot"></div>
+
+            <!-- Identity -->
+            <div class="pro-identity">
+              <h3 class="pro-name">Aarish Asif Master</h3>
+              <p class="pro-role">Aspiring Developer</p>
+              <div class="pro-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                  <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+                Pune, Maharashtra
+              </div>
             </div>
-            <div class="orbit orbit-2">
-              <div class="orbit-dot dot-2"></div>
+
+            <!-- Divider -->
+            <div class="pro-divider"></div>
+
+            <!-- Stats row -->
+            <div class="pro-stats">
+              <div class="pro-stat">
+                <span class="pro-stat-num">2</span>
+                <span class="pro-stat-lbl">Projects</span>
+              </div>
+              <div class="pro-stat-sep"></div>
+              <div class="pro-stat">
+                <span class="pro-stat-num">9+</span>
+                <span class="pro-stat-lbl">Skills</span>
+              </div>
+              <div class="pro-stat-sep"></div>
+              <div class="pro-stat">
+                <span class="pro-stat-num">1</span>
+                <span class="pro-stat-lbl">Cert</span>
+              </div>
+            </div>
+
+            <!-- Tech stack -->
+            <div class="pro-stack">
+              <span class="stack-label">Tech Stack</span>
+              <div class="stack-pills">
+                <span class="stack-pill">HTML</span>
+                <span class="stack-pill">CSS</span>
+                <span class="stack-pill">JavaScript</span>
+                <span class="stack-pill">C++</span>
+                <span class="stack-pill">Java</span>
+                <span class="stack-pill">Git</span>
+              </div>
+            </div>
+
+            <!-- Status -->
+            <div class="pro-status">
+              <span class="status-pulse"></span>
+              Available for opportunities
+            </div>
+
+          </div>
+
+          <!-- Floating side cards -->
+          <div class="side-card side-top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#63b3ed" stroke-width="1.5" width="16" height="16">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <div>
+              <div class="side-card-title">BCA Student</div>
+              <div class="side-card-sub">ADYPU · 2024–2027</div>
             </div>
           </div>
 
-          <!-- Tech floating badges -->
-          <div class="float-badge badge-tl">Angular 17</div>
-          <div class="float-badge badge-tr">TypeScript</div>
-          <div class="float-badge badge-bl">Node.js</div>
-          <div class="float-badge badge-br">AWS</div>
+          <div class="side-card side-bottom">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="color:#68d391">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <div>
+              <div class="side-card-title">Open Source</div>
+              <div class="side-card-sub">github.com/aarishhh</div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -292,91 +363,251 @@ import { Profile } from '../../interfaces/profile.interface';
       letter-spacing: 0.08em;
     }
 
-    /* Avatar visual */
+    /* ── Professional Profile Card ── */
     .hero-visual {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 450px;
-    }
-    .avatar-ring {
-      position: relative;
-      width: 280px;
-      height: 280px;
-    }
-    .avatar-ring-inner {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      padding: 4px;
-      background: linear-gradient(135deg, #63b3ed, #9f7aea, #63b3ed);
-      animation: rotateBorder 6s linear infinite;
-    }
-    @keyframes rotateBorder {
-      from { filter: hue-rotate(0deg); }
-      to { filter: hue-rotate(360deg); }
-    }
-    .avatar-img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      background: #1a202c;
+      height: 480px;
     }
 
-    /* Orbiting elements */
-    .orbit {
-      position: absolute;
-      top: 50%; left: 50%;
+    .pro-card {
+      width: 300px;
+      background: rgba(13, 17, 28, 0.95);
+      border: 1px solid rgba(99,179,237,0.15);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow:
+        0 0 0 1px rgba(99,179,237,0.05),
+        0 25px 70px rgba(0,0,0,0.6),
+        0 0 100px rgba(99,179,237,0.06);
+      animation: cardFloat 6s ease-in-out infinite;
+      position: relative;
+      z-index: 2;
+    }
+    @keyframes cardFloat {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-12px); }
+    }
+
+    /* Top gradient band */
+    .pro-card-band {
+      height: 5px;
+      background: linear-gradient(90deg, #3182ce, #63b3ed, #9f7aea, #63b3ed, #3182ce);
+      background-size: 200% 100%;
+      animation: bandShift 4s linear infinite;
+    }
+    @keyframes bandShift {
+      0%   { background-position: 0% 0%; }
+      100% { background-position: 200% 0%; }
+    }
+
+    /* Avatar */
+    .pro-avatar-wrap {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      margin: 1.75rem auto 0;
+    }
+    .pro-avatar {
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
-      border: 1px dashed rgba(99,179,237,0.2);
+      background: linear-gradient(135deg, #2b6cb0, #553c9a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+      position: relative;
+      z-index: 1;
     }
-    .orbit-1 {
-      width: 340px; height: 340px;
-      margin: -170px 0 0 -170px;
-      animation: spin 12s linear infinite;
+    .pro-avatar-ring {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      background: conic-gradient(#63b3ed, #9f7aea, #63b3ed, transparent, transparent);
+      animation: ringRotate 3s linear infinite;
+      z-index: 0;
     }
-    .orbit-2 {
-      width: 410px; height: 410px;
-      margin: -205px 0 0 -205px;
-      animation: spin 20s linear infinite reverse;
-    }
-    @keyframes spin {
-      from { transform: rotate(0deg); }
+    @keyframes ringRotate {
       to { transform: rotate(360deg); }
     }
-    .orbit-dot {
-      position: absolute;
-      top: -5px; left: 50%;
-      width: 10px; height: 10px;
-      margin-left: -5px;
-      border-radius: 50%;
-      background: #63b3ed;
-      box-shadow: 0 0 10px rgba(99,179,237,0.8);
-    }
-    .dot-2 { background: #9f7aea; box-shadow: 0 0 10px rgba(159,122,234,0.8); }
 
-    /* Floating badges */
-    .float-badge {
-      position: absolute;
-      background: rgba(26,32,44,0.9);
-      border: 1px solid rgba(99,179,237,0.2);
-      color: #a0aec0;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
+    /* Identity */
+    .pro-identity {
+      text-align: center;
+      padding: 1rem 1.5rem 0;
+    }
+    .pro-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f7fafc;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.25rem;
+    }
+    .pro-role {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.75rem;
-      backdrop-filter: blur(10px);
-      animation: floatBadge 4s ease-in-out infinite;
+      color: #63b3ed;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.03em;
     }
-    .badge-tl { top: 10%; left: 0; animation-delay: 0s; }
-    .badge-tr { top: 15%; right: 0; animation-delay: -1s; }
-    .badge-bl { bottom: 20%; left: 0; animation-delay: -2s; }
-    .badge-br { bottom: 15%; right: 0; animation-delay: -3s; }
-    @keyframes floatBadge {
+    .pro-location {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.75rem;
+      color: #4a5568;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .pro-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(99,179,237,0.12), transparent);
+      margin: 1.25rem 1.5rem;
+    }
+
+    /* Stats */
+    .pro-stats {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      padding: 0 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .pro-stat {
+      flex: 1;
+      text-align: center;
+    }
+    .pro-stat-sep {
+      width: 1px;
+      height: 28px;
+      background: rgba(99,179,237,0.1);
+    }
+    .pro-stat-num {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #f7fafc;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+    .pro-stat-lbl {
+      font-size: 0.68rem;
+      color: #4a5568;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    /* Tech stack */
+    .pro-stack {
+      padding: 0 1.25rem 1.25rem;
+    }
+    .stack-label {
+      display: block;
+      font-size: 0.68rem;
+      color: #4a5568;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 0.6rem;
+    }
+    .stack-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .stack-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: #a0aec0;
+      background: rgba(45,55,72,0.5);
+      border: 1px solid rgba(74,85,104,0.3);
+      padding: 0.2rem 0.6rem;
+      border-radius: 5px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .stack-pill:hover {
+      color: #63b3ed;
+      border-color: rgba(99,179,237,0.4);
+    }
+
+    /* Status bar */
+    .pro-status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0.75rem 1.25rem;
+      background: rgba(104,211,145,0.06);
+      border-top: 1px solid rgba(104,211,145,0.12);
+      font-size: 0.72rem;
+      color: #68d391;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.03em;
+    }
+    .status-pulse {
+      width: 7px; height: 7px;
+      background: #68d391;
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(104,211,145,0.5); }
+      50%       { box-shadow: 0 0 0 5px rgba(104,211,145,0); }
+    }
+
+    /* Side floating cards */
+    .side-card {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(13,17,28,0.92);
+      border: 1px solid rgba(99,179,237,0.15);
+      border-radius: 12px;
+      padding: 0.7rem 1rem;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      min-width: 180px;
+      z-index: 3;
+    }
+    .side-top {
+      top: 6%;
+      right: -10px;
+      animation: floatA 5s ease-in-out infinite;
+    }
+    .side-bottom {
+      bottom: 10%;
+      left: -10px;
+      animation: floatB 5s ease-in-out infinite;
+    }
+    @keyframes floatA {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+      50%       { transform: translateY(-8px); }
+    }
+    @keyframes floatB {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(8px); }
+    }
+    .side-card-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-bottom: 2px;
+    }
+    .side-card-sub {
+      font-size: 0.68rem;
+      color: #4a5568;
+      font-family: 'JetBrains Mono', monospace;
     }
 
     .scroll-hint {
@@ -431,7 +662,7 @@ export class HeroComponent implements OnInit {
 
   gridLines = Array(20).fill(0);
   stats = [
-      { value: '', label: '' },
+    { value: '', label: '' },
   ];
 
   ngOnInit() {}
