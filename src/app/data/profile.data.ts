@@ -1,7 +1,7 @@
 import { Profile } from '../interfaces/profile.interface';
 
 export const PROFILE_DATA: Profile = {
-  name: 'Aarish Asif Master',
+  name: 'Aarish Katawala',
   title: 'Aspiring Developer | C++, Data Structures & Web',
   bio: `Passionate developer with a strong foundation in data structures, algorithms, and web technologies.
   I build clean, responsive web experiences and love solving complex problems with efficient, scalable code.
