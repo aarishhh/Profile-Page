@@ -75,7 +75,7 @@ import { Profile } from '../../interfaces/profile.interface';
 
             <!-- Identity -->
             <div class="pro-identity">
-              <h3 class="pro-name">Aarish Asif Master</h3>
+              <h3 class="pro-name">Aarish Katawala</h3>
               <p class="pro-role">Aspiring Developer</p>
               <div class="pro-location">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12">
